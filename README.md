@@ -1,81 +1,85 @@
-# Proyecto Final: Historia del Rock y sus Derivados (Metal)
+# 🎸 Historia del Rock y sus Derivados: Una Página Interactiva
 
-## Tema Elegido
-Historia del Rock desde sus orígenes en los 50s (Elvis, Chuck Berry) pasando por los 60s (Beatles), 70s (Led Zeppelin) hasta el Heavy Metal y subgéneros como Thrash (Metallica).
+## ¿De qué trata esta web?
 
-## Tecnologías Utilizadas
-- **Frontend**: HTML5 semántico, CSS3 (Grid, Flexbox, Animaciones, Responsive), JavaScript (Fetch API, async/await).
-- **Backend**: Node.js + Express (API REST: GET/POST /api/comments), almacenamiento en memoria.
-- **Diseño**: Tema oscuro rock/metal (rojo/negro), galería responsive.
+Esta es una página interactiva dedicada a explorar la fascinante evolución del rock a lo largo de los años. Desde sus humildes comienzos en los años 50 con leyendas como Elvis Presley y Chuck Berry, pasando por la revolución de los 60 con The Beatles y The Rolling Stones, hasta la era del hard rock y heavy metal de los 70 con bandas icónicas como Led Zeppelin, Black Sabbath y Deep Purple.
+
+El proyecto profundiza en cómo el rock evolucionó hacia sus derivados más agresivos y complejos, especialmente el thrash metal con bandas como Metallica, explorando la riqueza de subgéneros que surgieron de ese tronco común.
+
+La web está diseñada con un estilo rock/metal característico (colores rojo y negro) y permite a los visitantes no solo conocer la historia, sino también dejar sus comentarios y reflexiones sobre las leyendas presentadas.
+
+## Cómo fue construida: Las Tecnologías Utilizadas
+
+### 🎯 Frontend (Lo que ves en tu navegador)
+- **HTML5**: Estructura semántica y moderna para la página
+- **CSS3**: Diseñamos la interfaz visual usando Flexbox, Grid y animaciones para una experiencia responsive que se adapta a cualquier dispositivo (móvil, tablet, computadora)
+- **Bootstrap 5**: Framework CSS que nos ayudó a construir rápidamente una interfaz profesional y consistente
+- **JavaScript**: Manejamos la interactividad de la página, permitiendo que el formulario de comentarios funcione en tiempo real y se comunique con el servidor
+
+### ⚙️ Backend (Lo que ocurre detrás de escenas)
+- **Node.js**: Plataforma que ejecuta JavaScript en el servidor
+- **Express**: Framework web ligero que nos permite crear una API REST (interfaz para comunicarse con el frontend)
+- **API REST**: Dos endpoints principales:
+  - `GET /api/comments`: Obtiene todos los comentarios guardados
+  - `POST /api/comments`: Permite guardar nuevos comentarios
+
+### 💾 Almacenamiento
+- Los comentarios se guardan en memoria del servidor, lo que permite que sean visibles en tiempo real para todos los visitantes mientras el servidor esté activo
 
 ## Estructura del Proyecto
+
 ```
-.
-├── package.json      # Dependencias (express)
-├── server.js         # Servidor Express + API comentarios
-├── public/
-│   ├── index.html    # Página principal (intro, galería, form, comentarios)
-│   ├── style.css     # Estilos rock-themed
-│   └── script.js     # Interactividad (form + fetch)
-├── TODO.md           # Progreso implementación
-└── README.md         # Este archivo
+Proyecto-Final-Desarrollo-Web-Uniasturias/
+├── package.json              # Configuración del proyecto y dependencias
+├── server.js                 # Servidor Express y API de comentarios
+├── README.md                 # Este archivo
+├── TODO.md                   # Tareas completadas y estado del proyecto
+└── public/                   # Archivos accesibles desde el navegador
+    ├── index.html            # Página principal (intro, galería, formulario, comentarios)
+    ├── style.css             # Estilos personalizados con tema rock/metal
+    ├── script.js             # Lógica JavaScript para la interactividad
+    └── images/               # Carpeta con imágenes de leyendas del rock
 ```
 
-## Instrucciones de Ejecución
-1. En terminal (en este directorio): `npm install`
-2. Iniciar servidor: `npm start`
-3. Abrir: http://localhost:3000
-4. Probar: Agregar comentarios → se muestran dinámicamente.
+## Funcionalidades Principales
 
-## Funcionalidades Cumplidas
-- ✅ Introducción al tema.
-- ✅ Galería imágenes (6 leyendas rock/metal, Wikimedia).
-- ✅ Formulario interactivo (nombre + comentario).
-- ✅ Backend: Guarda/muestra comentarios en tiempo real.
-- ✅ Diseño responsive y estético.
+✅ **Introducción Histórica**: Una sección que cuenta la evolución del rock desde sus orígenes  
+✅ **Galería de Leyendas**: Imágenes y biografías de artistas y bandas icónicas del rock y metal  
+✅ **Formulario Interactivo**: Los visitantes pueden dejar comentarios con su nombre y opinión  
+✅ **Comentarios Dinámicos**: Los comentarios aparecen en tiempo real sin necesidad de recargar la página  
+✅ **Diseño Responsive**: La página se ve perfecta en cualquier dispositivo  
+✅ **Estética Rock/Metal**: Tema visual con colores oscuros, rojo y negro que refleja la esencia del genre  
 
-# Proyecto Final - Historia del Rock y Metal
+## 🚀 Visita la Página en Vivo
 
-## Tema elegido
-Rock / Metal. Página personal sobre leyendas del rock y evolución hacia el heavy metal.
+¡La página ya está desplegada en Replit y lista para usar! No necesitas instalar nada localmente si solo quieres explorarla:
 
-## Tecnologías utilizadas
-- HTML
-- CSS (Bootstrap + estilos propios)
-- JavaScript (DOM, Fetch API)
-- Node.js + Express
+👉 **[Abre la página en Replit](https://proyecto-final-desarrollo-web-uniasturias--jruizbautista11.replit.app/)**
 
-## Estructura de la web
-1. Introducción al tema (historia general).
-2. Galería de imágenes + mini biografías:
-   - Elvis Presley
-   - The Beatles
-   - Led Zeppelin
-   - Black Sabbath
-   - Metallica
-   - Iron Maiden
-3. Sección interactiva:
-   - Formulario con campos `Nombre` y `Comentario`.
-4. Lista dinámica de comentarios en la misma página.
+Desde aquí puedes ver la galería de leyendas del rock, leer la introducción y dejar tus comentarios de manera inmediata.
 
-## Backend y API
-- `server.js` con Express:
-  - `GET /api/comments`: retorna comentarios guardados en memoria.
-  - `POST /api/comments`: recibe JSON `{name, comment}` y lo almacena con `timestamp`.
-- Los datos no se guardan en base de datos persistente (se reinician en reinicio del servidor), pero el comportamiento es funcional para el enunciado.
+## Cómo Ejecutar la Página Localmente
 
-## Frontend dinámico
-- `public/script.js`:
-  - Carga inicial de comentarios (`loadComments()`).
-  - Renderizado con `displayComments()`.
-  - Envío de formulario y recarga inmediata.
-  - Gestión de errores.
+Si prefieres ejecutar el proyecto en tu computadora:
 
-## Pruebas
-- Iniciar servidor: `node server.js`.
-- Abrir `http://localhost:3000`.
-- Enviar varios comentarios con nombre y texto.
-- Ver comentarios en el panel y en recargas posteriores de página (mientras el servidor esté activo).
+### Primer paso: Instalar las dependencias
+```bash
+npm install
+```
+
+### Segundo paso: Iniciar el servidor
+```bash
+npm start
+```
+
+El servidor se ejecutará en `http://localhost:3001`
+
+### Tercer paso: Disfrutar
+Abre tu navegador y ve a `http://localhost:3001` para explorar la página, conocer la historia del rock y dejar tus comentarios.
+
+---
+
+**Desarrollado como proyecto final de Desarrollo Web en Uniasturias** 🎸🎤
 
 ## Anexo IA (conversación)
 - Se interactuó con IA (ChatGPT, Raptor mini).
