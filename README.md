@@ -82,7 +82,7 @@ Abre tu navegador y ve a `http://localhost:3001` para explorar la página, conoc
 **Desarrollado como proyecto final de Desarrollo Web en Uniasturias** 🎸🎤
 
 ## Anexo IA (conversación)
-- Se interactuó con IA (ChatGPT, Raptor mini).
+- Se interactuó con IA (Copilot).
 - Ajustes realizados con IA:
   - Implementación de rutas para CRUD básico de comentarios.
   - Fetch y render en la misma página.
